@@ -9,10 +9,10 @@ const projects = [
   { id: "2", title: "TODO", tasks: ["TESTE"] }
 ];
 
-var numRequests = 0;
+let numRequests = 0;
 
 server.use((req, res, next) => {
-  numRequests += 1;
+  numRequests++;
   console.log(`Requests: ${numRequests}`);
   next();
 });
